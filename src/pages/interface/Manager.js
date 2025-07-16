@@ -1,3 +1,4 @@
+import React from 'react';
 const Manager = () => {
   return <h1>Manager Interface </h1>;
 };

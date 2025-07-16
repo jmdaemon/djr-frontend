@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 // import logo from './logo.svg';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -17,6 +17,9 @@ import WorkOrderForm from "./pages/form/WorkOrderForm";
 import Customer from "./pages/interface/Customer";
 import Manager from "./pages/interface/Manager";
 import Worker from "./pages/interface/Worker";
+
+// Create Customer Interface First
+// Create Employee (Worker) Interface Second
 
 function App() {
   return (
