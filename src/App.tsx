@@ -8,10 +8,13 @@ import './App.css';
 import Portal from "./pages/Portal";
 import NoPage from "./pages/NoPage";
 
-// Forms
-import RepairForm from "./pages/form/RepairForm";
-import CustomerForm from "./pages/form/CustomerForm";
-import WorkOrderForm from "./pages/form/WorkOrderForm";
+// Old
+// import RepairForm from "./pages/form/RepairForm";
+// import CustomerForm from "./pages/form/CustomerForm";
+// import WorkOrderForm from "./pages/form/WorkOrderForm";
+
+// import Manager from "./pages/interface/Manager";
+// import Worker from "./pages/interface/Worker";
 
 // Interfaces
 import Login from "./components/Login";
@@ -19,8 +22,6 @@ import Register from './components/Register';
 import Overview from './components/Overview';
 import Repairs from './components/Repairs';
 
-import Manager from "./pages/interface/Manager";
-import Worker from "./pages/interface/Worker";
 
 // Create Customer Interface First
 // Create Employee (Worker) Interface Second
@@ -43,13 +44,6 @@ function App() {
         <Route path="/employee/register" element={<Register/>} />
         <Route path="/employee/user/overview" element={<Overview/>} />
         <Route path="/employee/user/repairs" element={<Overview/>} />
-
-        <Route path="/interface/manager" element={<Manager/>} />
-        <Route path="/interface/worker" element={<Worker/>} />
-
-        <Route path="/form/customer" element={<CustomerForm/>} />
-        <Route path="/form/repair" element={<RepairForm/>} />
-        <Route path="/form/work" element={<WorkOrderForm/>} />
 
         <Route path="*" element={<NoPage />} />
       </Routes>
