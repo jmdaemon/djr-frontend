@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import { TextField, Button, FormControl, InputLabel, Input, Box, Avatar, Stack, Grid, BottomNavigation, BottomNavigationAction } from '@mui/material';
+import { TextField, Button, FormControl, InputLabel, Input, Box, Avatar, Stack, Grid, BottomNavigation, BottomNavigationAction, OutlinedInput, InputAdornment, IconButton } from '@mui/material';
+
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -19,6 +22,19 @@ import {Link} from 'react-router-dom';
 
 const Login = () => {
   const [value, setValue] = React.useState(0);
+
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
+
+  const handleMouseUpPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <Stack
@@ -63,10 +79,34 @@ const Login = () => {
           </FormControl>
 
 
-          <FormControl variant="standard" fullWidth>
-            <InputLabel htmlFor="component-simple">Password</InputLabel>
-            <Input id="component-simple" defaultValue=""/>
-          </FormControl>
+          {/* <FormControl variant="standard" fullWidth> */}
+          {/*   <InputLabel htmlFor="component-simple">Password</InputLabel> */}
+          {/*   <Input id="component-simple" defaultValue=""/> */}
+          {/* </FormControl> */}
+
+          <FormControl sx={{ }} variant="outlined" fullWidth>
+          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          <OutlinedInput fullWidth
+            id="outlined-adornment-password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label={
+                    showPassword ? 'hide the password' : 'display the password'
+                  }
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  onMouseUp={handleMouseUpPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
 
           {/* <TextField label="Password" color="primary" width="200"> */}
           {/*   Password */}
