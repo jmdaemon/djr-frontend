@@ -1,7 +1,11 @@
 import React from 'react';
-import ResponsiveAppBar from './TopAppBar';
 import {Button, Container, FormControl, Grid, Input, InputLabel, List, ListItemButton, ListItemText, ListSubheader, Stack} from '@mui/material';
+
+import ResponsiveAppBar from './TopAppBar';
 import BottomAppBar from './BotAppBar';
+import RequestsTable from './RepairRequests';
+import UserNav from './UserNav';
+import RepairsTable from './RepairsTable';
 
 const Repairs = () => {
   const [value, setValue] = React.useState(0);
@@ -21,54 +25,23 @@ const Repairs = () => {
         <ResponsiveAppBar/>
 
         <Grid container spacing={2}>
-          <Grid size={3}>
-            <List
-              sx={{ width: '100%', maxWidth: 200, bgcolor: 'background.paper' }}
-              component="nav"
-              aria-labelledby="nested-list-subheader"
-  subheader={
-                <ListSubheader component="div" id="nested-list-subheader">
-              <h2>Dashboard</h2>
-                </ListSubheader>
-              }
-            >
-              <ListItemButton>
-                <ListItemText  primary="Account Overview" />
-              </ListItemButton>
-
-              <ListItemButton>
-                <ListItemText primary="Account Details" />
-              </ListItemButton>
-
-              <ListItemButton onClick={handleClick}>
-                <ListItemText primary="Device Repairs" />
-                {/* {open ? <ExpandLess /> : <ExpandMore />} */}
-              </ListItemButton>
-
-              <ListItemButton onClick={handleClick}>
-                <ListItemText primary="Logout" />
-                {/* {open ? <ExpandLess /> : <ExpandMore />} */}
-              </ListItemButton>
-            </List>
+          <Grid size={2.5}>
+            <UserNav/>
           </Grid>
 
           <Grid size={4}>
-            <h2>Your Information</h2>
-
-            <p>First Name</p>
-
-            <p>Last Name</p>
-
-            <p>Email</p>
-
-            <p>Phone</p>
+            <h2>Service Requests</h2>
+            <RequestsTable/>
           </Grid>
 
           <Grid size={4}>
+            <h2>Repair Jobs</h2>
+            <RepairsTable/>
           </Grid>
 
         </Grid>
       </Stack>
+
       <BottomAppBar/>
     </>
   );

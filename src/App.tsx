@@ -40,10 +40,11 @@ function App() {
         <Route path="/customer/user/repairs" element={<Repairs/>} />
 
         {/* TODO: Complete Employee variants */} 
+        {/* TODO: Add support for Employee login and manage user details */} 
         <Route path="/employee/login" element={<Login/>} />
         <Route path="/employee/register" element={<Register/>} />
         <Route path="/employee/user/overview" element={<Overview/>} />
-        <Route path="/employee/user/repairs" element={<Overview/>} />
+        <Route path="/employee/user/repairs" element={<Repairs/>} />
 
         <Route path="*" element={<NoPage />} />
       </Routes>
