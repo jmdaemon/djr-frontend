@@ -26,6 +26,7 @@ const CustomerOverview = () => {
             <UserNav/>
           </Grid>
 
+          {/* TODO: Create a USER FORM */}
           <Grid size={4}>
             <h2>Your Information</h2>
 

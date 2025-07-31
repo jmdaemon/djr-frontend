@@ -32,7 +32,7 @@ const UserNav = () => {
 
     <ListItemButton>
 
-      <Link to="/customer/account" style={{ color: 'inherit', textDecoration: 'none' }}>
+      <Link to="/customer/user/account" style={{ color: 'inherit', textDecoration: 'none' }}>
         <ListItemText primary="Account Details" />
       </Link>
     </ListItemButton>

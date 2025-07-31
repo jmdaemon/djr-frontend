@@ -21,6 +21,7 @@ import Login from "./components/Login";
 import Register from './components/Register';
 import Overview from './components/Overview';
 import Repairs from './components/Repairs';
+import AccountDetails from './components/AccountDetails';
 
 
 // Create Customer Interface First
@@ -37,6 +38,7 @@ function App() {
         <Route path="/customer/login" element={<Login/>} />
         <Route path="/customer/register" element={<Register/>} />
         <Route path="/customer/user/overview" element={<Overview/>} />
+        <Route path="/customer/user/account" element={<AccountDetails/>} />
         <Route path="/customer/user/repairs" element={<Repairs/>} />
 
         {/* TODO: Complete Employee variants */} 
