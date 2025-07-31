@@ -25,33 +25,29 @@ const UserNav = () => {
       </ListSubheader>
     }
   >
-    <ListItemButton>
-      <Link to="/customer/user/overview" style={{ color: 'inherit', textDecoration: 'none' }}> 
-      <ListItemText primary="Account Overview" /> </Link>
-    </ListItemButton>
+    <Link to="/customer/user/overview" style={{ color: 'inherit', textDecoration: 'none' }}> 
+      <ListItemButton>
+        <ListItemText primary="Account Overview" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-
-      <Link to="/customer/user/account" style={{ color: 'inherit', textDecoration: 'none' }}>
+    <Link to="/customer/user/account" style={{ color: 'inherit', textDecoration: 'none' }}>
+      <ListItemButton>
         <ListItemText primary="Account Details" />
-      </Link>
-    </ListItemButton>
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton onClick={handleClick}>
-
-      <Link to="/customer/user/repairs" style={{ color: 'inherit', textDecoration: 'none' }}>
+    <Link to="/customer/user/repairs" style={{ color: 'inherit', textDecoration: 'none' }}>
+      <ListItemButton onClick={handleClick}>
         <ListItemText primary="Device Repairs" />
-        {/* {open ? <ExpandLess /> : <ExpandMore />} */}
-      </Link>
-    </ListItemButton>
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton onClick={handleClick}>
-
-      <Link to="/customer/login" style={{ color: 'inherit', textDecoration: 'none' }}>
-        <ListItemText primary="Logout" />
-      </Link>
-      {/* {open ? <ExpandLess /> : <ExpandMore />} */}
-    </ListItemButton>
+    <Link to="/customer/login" style={{ color: 'inherit', textDecoration: 'none' }}>
+      <ListItemButton onClick={handleClick}>
+          <ListItemText primary="Logout" />
+      </ListItemButton>
+    </Link>
   </List>
   );
 }
