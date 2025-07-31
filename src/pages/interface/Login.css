@@ -1,0 +1,20 @@
+html {
+    margin: 6;
+    padding: 6;
+}
+
+.login-form {
+    margin: 6;
+    padding: 6;
+}
+
+/* .container { */
+/*   display: grid; */
+/*   padding: 6; */
+/*   margin: 6; */
+/*   row-gap: 6; */
+/* } */ 
+
+* {
+    padding: 6;
+}
