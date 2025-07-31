@@ -16,7 +16,8 @@ import WorkOrderForm from "./pages/form/WorkOrderForm";
 // Interfaces
 import Login from "./components/Login";
 import Register from './components/Register';
-import CustomerOverview from './components/CustomerOverview';
+import Overview from './components/Overview';
+import Repairs from './components/Repairs';
 
 import Manager from "./pages/interface/Manager";
 import Worker from "./pages/interface/Worker";
@@ -34,14 +35,14 @@ function App() {
         <Route path="/" element={<Portal />}/>
         <Route path="/customer/login" element={<Login/>} />
         <Route path="/customer/register" element={<Register/>} />
-        <Route path="/customer/user/overview" element={<CustomerOverview/>} />
-        <Route path="/customer/user/repairs" element={<Login/>} />
+        <Route path="/customer/user/overview" element={<Overview/>} />
+        <Route path="/customer/user/repairs" element={<Repairs/>} />
 
         {/* TODO: Complete Employee variants */} 
         <Route path="/employee/login" element={<Login/>} />
-        <Route path="/customer/register" element={<Register/>} />
-
-        <Route path="/customer/user/overview" element={<CustomerOverview/>} />
+        <Route path="/employee/register" element={<Register/>} />
+        <Route path="/employee/user/overview" element={<Overview/>} />
+        <Route path="/employee/user/repairs" element={<Overview/>} />
 
         <Route path="/interface/manager" element={<Manager/>} />
         <Route path="/interface/worker" element={<Worker/>} />
