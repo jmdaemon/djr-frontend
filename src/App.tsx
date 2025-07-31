@@ -14,7 +14,10 @@ import CustomerForm from "./pages/form/CustomerForm";
 import WorkOrderForm from "./pages/form/WorkOrderForm";
 
 // Interfaces
-import Customer from "./pages/interface/Customer";
+import Login from "./components/Login";
+import Register from './components/Register';
+import CustomerOverview from './components/CustomerOverview';
+
 import Manager from "./pages/interface/Manager";
 import Worker from "./pages/interface/Worker";
 
@@ -25,8 +28,21 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* TODO: Implement user input sanitization & validation */} 
+        {/* TODO: Implement user rest api requests */} 
+        {/* TODO: Implement basic styling */} 
         <Route path="/" element={<Portal />}/>
-        <Route path="/interface/customer" element={<Customer/>} />
+        <Route path="/customer/login" element={<Login/>} />
+        <Route path="/customer/register" element={<Register/>} />
+        <Route path="/customer/user/overview" element={<CustomerOverview/>} />
+        <Route path="/customer/user/repairs" element={<Login/>} />
+
+        {/* TODO: Complete Employee variants */} 
+        <Route path="/employee/login" element={<Login/>} />
+        <Route path="/customer/register" element={<Register/>} />
+
+        <Route path="/customer/user/overview" element={<CustomerOverview/>} />
+
         <Route path="/interface/manager" element={<Manager/>} />
         <Route path="/interface/worker" element={<Worker/>} />
 

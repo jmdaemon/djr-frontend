@@ -8,14 +8,14 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import Container from '@mui/material/Container';
 
-import ResponsiveAppBar from '../../components/TopAppBar';
+import ResponsiveAppBar from './TopAppBar';
 
 import './Login.css';
-import BottomAppBar from '../../components/BotAppBar';
+import BottomAppBar from './BotAppBar';
 
 /* <h1>Service Repair App</h1> */
 
-const Customer = () => {
+const Login = () => {
   const [value, setValue] = React.useState(0);
   return (
     <>
@@ -32,7 +32,7 @@ const Customer = () => {
           spacing={2}
           direction="column"
           sx={{
-            width: 300,
+            width: 400,
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -42,7 +42,11 @@ const Customer = () => {
 
           <Avatar
             src="/broken-image.jpg"
-            sx={{ width: 300, height: 300 }}
+            sx={{
+                width: 300,
+                height: 300,
+                padding: 6,
+            }}
           />
 
           <h1>Login</h1>
@@ -74,7 +78,7 @@ const Customer = () => {
               variant="contained"
               color="primary"
               sx={{
-                width: 300,
+                width: 400,
               }}
             >
               Login
@@ -85,7 +89,7 @@ const Customer = () => {
               variant='outlined'
               color='primary'
               sx={{
-                width: 300,
+                width: 400,
               }}
             >
               Register
@@ -98,4 +102,4 @@ const Customer = () => {
   );
 };
 
-export default Customer;
+export default Login;
