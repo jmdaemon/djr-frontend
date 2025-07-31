@@ -34,7 +34,7 @@ const Repairs = () => {
             <h2>Service Requests</h2>
             <RequestsTable/>
 
-            <Link to="/customer/register" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <Link to="/customer/user/service-request" style={{ color: 'inherit', textDecoration: 'none' }}>
               <Button
                 size='small'
                 variant='contained'
