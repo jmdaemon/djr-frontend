@@ -115,27 +115,31 @@ const Login = () => {
           
           {/* <Grid container spacing={2}> */}
           <Stack spacing={2}>
-            <Button
-              size="large"
-              variant="contained"
-              color="primary"
-              sx={{
-                width: 400,
-              }}
-            >
-              <Link to="/customer/user/overview" style={{ color: 'inherit', textDecoration: 'none' }}> Login </Link>
-            </Button>
+            <Link to="/customer/user/overview" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <Button
+                size="large"
+                variant="contained"
+                color="primary"
+                sx={{
+                  width: 400,
+                }}
+              >
+                Login
+              </Button>
+            </Link>
 
-            <Button
-              size='small'
-              variant='outlined'
-              color='primary'
-              sx={{
-                width: 400,
-              }}
-            >
-              <Link to="/customer/register" style={{ color: 'inherit', textDecoration: 'none' }}> Register </Link>
-            </Button>
+            <Link to="/customer/register" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <Button
+                size='small'
+                variant='outlined'
+                color='primary'
+                sx={{
+                  width: 400,
+                }}
+              >
+                  Register
+              </Button>
+            </Link>
           </Stack>
         </Stack>
         <BottomAppBar/>
