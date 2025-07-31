@@ -10,8 +10,10 @@ import Container from '@mui/material/Container';
 
 import ResponsiveAppBar from './TopAppBar';
 
+// import './App.css';
 import './Login.css';
 import BottomAppBar from './BotAppBar';
+import {Link} from 'react-router-dom';
 
 /* <h1>Service Repair App</h1> */
 
@@ -81,7 +83,7 @@ const Login = () => {
                 width: 400,
               }}
             >
-              Login
+              <Link to="/customer/user/overview" style={{ color: 'inherit', textDecoration: 'none' }}> Login </Link>
             </Button>
 
             <Button
@@ -92,7 +94,7 @@ const Login = () => {
                 width: 400,
               }}
             >
-              Register
+              <Link to="/customer/register" style={{ color: 'inherit', textDecoration: 'none' }}> Register </Link>
             </Button>
           </Stack>
         </Stack>

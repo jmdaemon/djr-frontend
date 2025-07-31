@@ -1,5 +1,6 @@
 import React from 'react';
 import {List, ListItemButton, ListItemText, ListSubheader} from "@mui/material";
+import {Link} from 'react-router-dom';
 
 const UserNav = () => {
   const [open, setOpen] = React.useState(true);
@@ -25,20 +26,30 @@ const UserNav = () => {
     }
   >
     <ListItemButton>
-      <ListItemText  primary="Account Overview" />
+      <Link to="/customer/user/overview" style={{ color: 'inherit', textDecoration: 'none' }}> 
+      <ListItemText primary="Account Overview" /> </Link>
     </ListItemButton>
 
     <ListItemButton>
-      <ListItemText primary="Account Details" />
+
+      <Link to="/customer/account" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <ListItemText primary="Account Details" />
+      </Link>
     </ListItemButton>
 
     <ListItemButton onClick={handleClick}>
-      <ListItemText primary="Device Repairs" />
-      {/* {open ? <ExpandLess /> : <ExpandMore />} */}
+
+      <Link to="/customer/user/repairs" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <ListItemText primary="Device Repairs" />
+        {/* {open ? <ExpandLess /> : <ExpandMore />} */}
+      </Link>
     </ListItemButton>
 
     <ListItemButton onClick={handleClick}>
-      <ListItemText primary="Logout" />
+
+      <Link to="/customer/login" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <ListItemText primary="Logout" />
+      </Link>
       {/* {open ? <ExpandLess /> : <ExpandMore />} */}
     </ListItemButton>
   </List>

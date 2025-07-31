@@ -2,6 +2,7 @@ import React from 'react';
 import ResponsiveAppBar from './TopAppBar';
 import {Button, FormControl, Input, InputLabel, Stack} from '@mui/material';
 import BottomAppBar from './BotAppBar';
+import {Link} from 'react-router-dom';
 
 const Register = () => {
   const [value, setValue] = React.useState(0);
@@ -62,7 +63,7 @@ const Register = () => {
                 width: 400,
               }}
             >
-              Register
+              <Link to="/customer/login" style={{ color: 'inherit', textDecoration: 'none' }}> Register </Link>
             </Button>
 
           </Stack>
