@@ -75,7 +75,7 @@ const Login = () => {
 
           <FormControl variant="standard" fullWidth>
             <InputLabel htmlFor="component-simple">Email</InputLabel>
-            <Input id="component-simple" defaultValue=""/>
+            <Input id="login-email" defaultValue=""/>
           </FormControl>
 
 
@@ -85,10 +85,11 @@ const Login = () => {
           {/* </FormControl> */}
 
           <FormControl sx={{ }} variant="outlined" fullWidth>
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput fullWidth
-            id="outlined-adornment-password"
+          <InputLabel htmlFor="login-password">Password</InputLabel>
+          <OutlinedInput
+            id="login-password"
             type={showPassword ? 'text' : 'password'}
+            fullWidth
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
